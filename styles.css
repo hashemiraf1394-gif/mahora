@@ -1,0 +1,181 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background:#ebeaeafb;
+    font-family: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
+}
+ul{
+    list-style-type: none;
+}
+#header {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;          /* کمی کوچکتر */
+    margin: 12px;
+    padding: 12px 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.mah{
+    color: red;
+    display: inline;
+}
+.nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.nav-info{
+    text-decoration: none;
+    color: black;
+    
+}
+.save{
+    background:rgba(0, 0, 0, 0.888);
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 12px 15px;
+}
+.title{
+    color: black;
+    text-decoration: none;
+}
+/* main-body */
+.main-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;                    
+    justify-content: center;      
+    margin: 60px auto;            
+    max-width: 1600px;            
+    padding: 0 20px;              
+}
+.menu-item {
+    background: rgb(48, 47, 47);
+    border-radius: 18px;
+    color: white;
+    padding: 24px;
+    box-sizing: border-box;
+    gap: 16px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* محتوای داخل کارت پخش بشه */
+    
+}
+.menu-info {          
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  
+}
+.menu-img {
+    width: 100%;
+    max-width: 320px;         
+    height: 100%;
+    object-fit: contain;
+    background: white;
+    border-radius: 16px;
+    margin: 0 auto 20px;
+    margin-bottom: 5px;
+
+}
+.order{
+    color: black;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.price{
+    padding-left: 20px;
+    color: rgba(255, 0, 0, 0.664);
+}
+.text{
+    padding-bottom: 7px;
+    border-top: 1px solid gray;
+    padding-top: 10px;
+}
+.shop{
+    text-decoration: none;
+    color: #fff;
+    background: black;
+    border-radius: 16px;
+    padding: 10px 15px;
+    margin-right: 66.2%;
+    display: flex;
+}
+
+.tel-link{
+    text-align: center;
+    margin-top: 7%;
+    text-decoration: none;
+
+}
+/* موبایل‌های کوچک و متوسط — زیر ۷۶۰ پیکسل */
+@media (max-width: 760px) {
+    #header {
+        flex-direction: column;
+        gap: 18px;
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    .nav {
+        gap: 20px;
+        font-size: 0.95rem;
+    }
+
+    .save {
+        padding: 10px 100px;
+        font-size: 0.95rem;
+        
+    }
+
+    .main-body {
+        margin: 30px 10px;
+        gap: 15px;
+    }
+
+    .menu-item {
+        padding: 15px;
+    }
+    .tel-link{
+        margin-top: 1%;
+    }
+}
+
+/* تبلت‌ها و موبایل‌های بزرگ — حدود ۵۰۰ تا ۷۶۰ */
+@media (max-width: 900px) {
+    .main-body {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 900px) {
+    .menu-item {
+        flex: 1 1 38%;           /* تقریباً ۲–۳ تایی کنار هم */
+        max-width: 520px;        /* اجازه بده کارت‌ها بزرگ‌تر بشن */
+        padding: 28px;
+    }
+
+    .menu-img {
+        max-width: 380px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-item {
+        flex: 1 1 30%;           /* ۳–۴ تایی کنار هم */
+        max-width: 420px;
+    }
+}
